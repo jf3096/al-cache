@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- WARNING: This script should be end of body. Temporary place it here for test purpose -->
+    <script src="../dist/domLoaded.js"></script>
+    <script>
+        dom.domReady(function () {
+            console.log("before body");
+        });
+    </script>
+</head>
+<body>
+<strong>Simulate Testing by modifying "isLoaded" variable in source code. Manual test passed in chrome and emulator of IE8+</strong>
+</body>
+<script>
+    var consoleLogText = function () {
+        console.log("after body")
+    }
+    dom.domReady(consoleLogText)(consoleLogText)(consoleLogText);
+</script>
+</html>
